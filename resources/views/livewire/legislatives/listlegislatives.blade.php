@@ -29,11 +29,11 @@
                         <td class="px-6 py-4">
                             {{$value->nama_calon}}
                         </td>
-                        <td class="px-6 py-4">
-                            0
+                        <td class="px-6 py-4" wire:poll.5s>
+                            {{ $value->legislativeCount->sum('count') }}
                         </td>
                         <td class="px-6 py-4">
-                            0%
+                            {{ number_format(($value->legislativeCount->sum('count') / $sum_all_count) * 100, 2,",",".")}} %
                         </td>
                     </tr>
                     @endforeach

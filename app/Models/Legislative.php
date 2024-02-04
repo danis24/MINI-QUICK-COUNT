@@ -12,4 +12,9 @@ class Legislative extends Model
     protected $fillable = [
         'no_urut', 'nama_calon',
     ];
+
+    public function legislativeCount()
+    {
+        return $this->hasMany(LegislativeCount::class);
+    }
 }

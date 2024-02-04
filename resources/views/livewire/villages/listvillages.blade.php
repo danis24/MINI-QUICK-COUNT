@@ -42,21 +42,21 @@
                            -
                            @endif
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4" wire:poll.5s>
                             @if($value->jumlah_suara_masuk  == null)
                             0
                             @else
                             {{$value->jumlah_suara_masuk}}
                             @endif
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4" wire:poll.5s>
                             @if($value->jumlah_suara_sah  == null)
                             0
                             @else
                             {{$value->jumlah_suara_sah}}
                             @endif
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4" wire:poll.5s>
                             @if($value->jumlah_suara_tidak_sah  == null)
                             0
                             @else
