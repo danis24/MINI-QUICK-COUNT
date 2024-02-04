@@ -26,6 +26,7 @@ class Createuser extends Component
         ]);
 
         $user = User::create($this->form);
+        $user->assignRole('user');
         if($user){
             session()->flash('message', 'User Added Successfully !');
             return redirect(route('users.list'));

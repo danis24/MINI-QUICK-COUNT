@@ -14,4 +14,9 @@ class Flag extends Model
         'nama_partai',
         'logo'
     ];
+
+    public function flagCount()
+    {
+        return $this->hasMany(FlagCount::class);
+    }
 }
