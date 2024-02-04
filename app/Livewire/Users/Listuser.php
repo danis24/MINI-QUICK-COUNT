@@ -8,6 +8,8 @@ use Livewire\Component;
 class Listuser extends Component
 {
     public $showDeleteModal = false;
+    public $showPasswordModal = false;
+    public $password = '';
     public User $user;
 
 
@@ -33,8 +35,21 @@ class Listuser extends Component
         }
         $this->showDeleteModal = true;
     }
-    
 
+    public function showResetPasswordModal(User $user)
+    {
+        if($this->user->isNot($user)){
+            $this->user = $user;
+        }
+        $this->showPasswordModal = true;
+    }
+
+    public function resetPasswordAction()
+    {
+        $this->user->update(['password' => bcrypt($this->password)]);
+        $this->showPasswordModal = false;
+    }
+    
     public function actionDelete()
     {
         $user = $this->user->delete();
