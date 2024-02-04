@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('legislatives', function (Blueprint $table) {
             $table->id();
-            $table->string('legislative_name');
+            $table->integer('no_urut');
+            $table->string('nama_calon');
             $table->timestamps();
         });
     }

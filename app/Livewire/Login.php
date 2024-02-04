@@ -22,7 +22,7 @@ class Login extends Component
         ]);
 
         if(Auth::attempt($this->form)) {
-            return redirect(route('home'));
+            return redirect(route('dashboard'));
         }else{
             session()->flash('error', 'Alamat Email atau password salah !');
             return redirect(route('login'));

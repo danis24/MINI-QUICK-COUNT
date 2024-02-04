@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('flags', function (Blueprint $table) {
             $table->id();
-            $table->string('flag_name');
+            $table->integer('no_urut');
+            $table->string('nama_partai');
+            $table->string('logo');
             $table->timestamps();
         });
     }
