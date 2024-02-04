@@ -7,32 +7,43 @@ use Livewire\Component;
 
 class Listuser extends Component
 {
-    public $userId = 0;
+    public $showDeleteModal = false;
+    public User $user;
+
+
+    public function mount()
+    {
+        $this->user = $this->makeUserBlank();
+    }
+
+    public function makeUserBlank()
+    {
+        return User::make();
+    }
 
     public function fetchAll()
     {
         return User::all();
     }
 
-    public function changeDelete($userId)
+    public function changeDelete(User $user)
     {
-        $this->userId = $userId;
-    }
-
-    public function actionDelete()
-    {
-        if($this->userId == 0){
-            return;
+        if($this->user->isNot($user)){
+            $this->user = $user;
         }
-        $user = User::findOrFail($this->userId);
-        $user->delete();
-        if($user){
-            $this->fetchAll();
-        }
-        $this->userId = 0;
+        $this->showDeleteModal = true;
     }
     
 
+    public function actionDelete()
+    {
+        $user = $this->user->delete();
+        if($user){
+            $this->fetchAll();
+        }
+        $this->showDeleteModal = false;
+    }
+    
     public function render()
     {
         return view('livewire.users.listuser', [
