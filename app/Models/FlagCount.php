@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Legislative extends Model
+class FlagCount extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'no_urut', 'nama_calon',
+        'village_id', 'flag_id', 'count'
     ];
 }

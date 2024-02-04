@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('village_id');
             $table->unsignedBigInteger('legislative_id');
+            $table->integer('count');
 
             $table->timestamps();
             $table->foreign('village_id')->references('id')->on('villages');

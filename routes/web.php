@@ -37,7 +37,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/villages', Listvillages::class)->name('villages.list');
     
     // Users
-    Route::get('/users', Listuser::class)->name('users.list');
-    Route::get('/users/add', Createuser::class)->name('users.create');
-    Route::get('/users/{id}/edit', Updateuser::class)->name('users.update');
+    Route::get('/users', Listuser::class)->middleware('role:administrator')->name('users.list');
+    Route::get('/users/add', Createuser::class)->middleware('role:administrator')->name('users.create');
+    Route::get('/users/{id}/edit', Updateuser::class)->middleware('role:administrator')->name('users.update');
 });
