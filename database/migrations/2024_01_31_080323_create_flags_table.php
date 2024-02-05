@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('no_urut');
             $table->string('nama_partai');
+            $table->string('singkatan');
             $table->string('logo');
             $table->timestamps();
         });

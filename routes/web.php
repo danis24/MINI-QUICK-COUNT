@@ -22,20 +22,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Home::class)->name('home');
+Route::get('/', Dashboard::class)->name('dashboard');
 Route::get('/login', Login::class)->name('login');
+Route::get('/flags', Listflags::class)->name('flags.list');
+
+// Legislatives
+Route::get('/legislatives', Listlegislatives::class)->name('legislatives.list');
+
+// Villages
+Route::get('/villages', Listvillages::class)->name('villages.list');
+
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', Dashboard::class)->name('dashboard');
-
-    //Flags
-    Route::get('/flags', Listflags::class)->name('flags.list');
-
-    // Legislatives
-    Route::get('/legislatives', Listlegislatives::class)->name('legislatives.list');
-    
-    // Villages
-    Route::get('/villages', Listvillages::class)->name('villages.list');
-    
     // Users
     Route::get('/users', Listuser::class)->middleware('role:administrator')->name('users.list');
     Route::get('/users/add', Createuser::class)->middleware('role:administrator')->name('users.create');

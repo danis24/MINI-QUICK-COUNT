@@ -36,10 +36,18 @@
                             {{$value->nama_partai}}
                         </td>
                         <td class="px-6 py-4" wire:poll.5s>
+                            @if($value->flagCount->count() > 0)
                             {{$value->flagCount->sum('count')}}
+                            @else
+                            0
+                            @endif
                         </td>
                         <td class="px-6 py-4" wire:poll.5s>
+                            @if($value->flagCount->count() > 0)
                             {{ number_format(($value->flagCount->sum('count') / $sum_all_count) * 100,2,",",".") }} %
+                            @else
+                            0 %
+                            @endif
                         </td>
                     </tr>
                     @endforeach

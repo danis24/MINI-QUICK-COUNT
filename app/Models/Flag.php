@@ -12,7 +12,8 @@ class Flag extends Model
     protected $fillable = [
         'no_urut',
         'nama_partai',
-        'logo'
+        'logo',
+        'singkatan'
     ];
 
     public function flagCount()

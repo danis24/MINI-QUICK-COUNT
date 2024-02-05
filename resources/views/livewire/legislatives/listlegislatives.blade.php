@@ -30,10 +30,18 @@
                             {{$value->nama_calon}}
                         </td>
                         <td class="px-6 py-4" wire:poll.5s>
+                            @if($value->legislativeCount->count() > 0)
                             {{ $value->legislativeCount->sum('count') }}
+                            @else
+                            0
+                            @endif
                         </td>
                         <td class="px-6 py-4">
+                            @if($value->legislativeCount->count() > 0)
                             {{ number_format(($value->legislativeCount->sum('count') / $sum_all_count) * 100, 2,",",".")}} %
+                            @else
+                            0 %
+                            @endif
                         </td>
                     </tr>
                     @endforeach
