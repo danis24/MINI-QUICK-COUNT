@@ -1,6 +1,6 @@
 <div>
     <livewire:navbar>
-    <div class="container mx-auto mt-10">
+    <div class="py-20 container mx-auto mt-10 px-10">
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

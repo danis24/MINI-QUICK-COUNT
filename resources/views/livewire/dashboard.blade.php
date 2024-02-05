@@ -1,6 +1,6 @@
 <div>
     <livewire:navbar>
-        <div class="container mx-auto mt-10 px-10">
+        <div class="py-20 container mx-auto mt-10 px-10">
             @if(auth()->check())
                 @if(auth()->user()->roles[0]->name == 'user')
                 <nav class="flex" aria-label="Breadcrumb">

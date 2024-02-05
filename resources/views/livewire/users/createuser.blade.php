@@ -1,6 +1,6 @@
 <div>
     <livewire:navbar>
-        <div class="container mx-auto mt-10 p-8">
+        <div class="py-20 container mx-auto mt-10 px-10">
             <form class="max-w-lg mx-auto" wire:submit.prevent="submit">
                 <div>
                     @if (session()->has('error'))
