@@ -22,7 +22,7 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody wire:poll.5s>
                     @if($flags->count() > 0)
                     @foreach($flags as $key => $value)
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -35,14 +35,14 @@
                         <td class="px-6 py-4">
                             {{$value->nama_partai}}
                         </td>
-                        <td class="px-6 py-4" wire:poll.5s>
+                        <td class="px-6 py-4">
                             @if($value->flagCount->count() > 0)
                             {{$value->flagCount->sum('count')}}
                             @else
                             0
                             @endif
                         </td>
-                        <td class="px-6 py-4" wire:poll.5s>
+                        <td class="px-6 py-4">
                             @if($value->flagCount->count() > 0)
                             {{ number_format(($value->flagCount->sum('count') / $sum_all_count) * 100,2,",",".") }} %
                             @else

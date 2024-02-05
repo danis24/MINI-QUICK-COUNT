@@ -19,7 +19,7 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody wire:poll.5s>
                     @if($legislatives->count() > 0)
                     @foreach($legislatives as $key => $value)
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -29,7 +29,7 @@
                         <td class="px-6 py-4">
                             {{$value->nama_calon}}
                         </td>
-                        <td class="px-6 py-4" wire:poll.5s>
+                        <td class="px-6 py-4">
                             @if($value->legislativeCount->count() > 0)
                             {{ $value->legislativeCount->sum('count') }}
                             @else

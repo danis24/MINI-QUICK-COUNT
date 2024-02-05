@@ -11,8 +11,16 @@ class Listlegislatives extends Component
     public function render()
     {
         return view('livewire.legislatives.listlegislatives', [
-            'legislatives' => Legislative::all(),
+            'legislatives' => $this->sortLegislative(),
             'sum_all_count' => LegislativeCount::sum('count')
         ]);
+    }
+
+    public function sortLegislative()
+    {
+        $legislative = Legislative::get();
+        return $legislative->sortByDesc(function ($legislative) {
+            return $legislative->legislativeCount->sum('count');
+        });
     }
 }
