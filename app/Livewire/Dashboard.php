@@ -68,7 +68,7 @@ class Dashboard extends Component
         $count = 0;
         foreach($flags as $key => $value)
         {
-            $column->addColumn($value->nama_partai, $value->flagCount->sum('count'), $colors[$count++]);
+            $column->addColumn($value->singkatan, $value->flagCount->sum('count'), $colors[$count++]);
         }
         return $column;
     }
