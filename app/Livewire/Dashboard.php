@@ -33,12 +33,12 @@ class Dashboard extends Component
         $flag = Flag::get();
         return $flag->sortByDesc(function ($flag) {
             return $flag->flagCount->sum('count');
-        })->take(5);
+        })->take(7);
     }
     
     public function chartLegislative()
     {
-        $colors = ['#f6ad55', '#fc8181', '#90cdf4', '#FF0000', '#8fce00'];
+        $colors = ['#f6ad55', '#fc8181', '#90cdf4', '#FF0000', '#8fce00', '#FFFF00', '#000000'];
         $legislative = Legislative::get();
         $legislatives = $legislative->sortByDesc(function ($legislative) {
             return $legislative->legislativeCount->sum('count');
@@ -56,12 +56,12 @@ class Dashboard extends Component
 
     public function chartFlag()
     {
-        $colors = ['#f6ad55', '#fc8181', '#90cdf4', '#FF0000', '#8fce00'];
+        $colors = ['#f6ad55', '#fc8181', '#90cdf4', '#FF0000', '#8fce00', '#FFFF00', '#000000'];
 
         $flag = Flag::get();
         $flags = $flag->sortByDesc(function ($flag) {
             return $flag->flagCount->sum('count');
-        })->take(5);
+        })->take(7);
 
         $column = (new ColumnChartModel())
             ->setTitle('Statistic Data Partai');
