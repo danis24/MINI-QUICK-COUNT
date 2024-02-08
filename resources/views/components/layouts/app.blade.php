@@ -11,7 +11,7 @@
     <livewire:styles />
     <livewire:scripts />
     <script src="{{asset('js/app.js')}}"></script>
-    <title>BADA - SmartElection</title>
+    <title>BADAR - SmartElection</title>
 </head>
 
 <body>
