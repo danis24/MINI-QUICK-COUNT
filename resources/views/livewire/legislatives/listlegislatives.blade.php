@@ -31,7 +31,7 @@
                         </td>
                         <td class="px-6 py-4">
                             @if($value->legislativeCount->count() > 0)
-                            {{ $value->legislativeCount->sum('count') }}
+                            {{ number_format( $value->legislativeCount->sum('count') , 0 , '.' , ',' ); }}
                             @else
                             0
                             @endif

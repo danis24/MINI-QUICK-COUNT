@@ -37,7 +37,7 @@
                         </td>
                         <td class="px-6 py-4">
                             @if($value->flagCount->count() > 0)
-                            {{$value->flagCount->sum('count')}}
+                            {{ number_format( $value->flagCount->sum('count') , 0 , '.' , ',' ); }}
                             @else
                             0
                             @endif

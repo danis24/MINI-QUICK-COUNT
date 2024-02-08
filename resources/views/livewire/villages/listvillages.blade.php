@@ -46,21 +46,21 @@
                             @if($value->jumlah_suara_masuk  == null)
                             0
                             @else
-                            {{$value->jumlah_suara_masuk}}
+                            {{ number_format( $value->jumlah_suara_masuk , 0 , '.' , ',' ); }}
                             @endif
                         </td>
                         <td class="px-6 py-4" wire:poll.5s>
                             @if($value->jumlah_suara_sah  == null)
                             0
                             @else
-                            {{$value->jumlah_suara_sah}}
+                            {{ number_format( $value->jumlah_suara_sah , 0 , '.' , ',' ); }}
                             @endif
                         </td>
                         <td class="px-6 py-4" wire:poll.5s>
                             @if($value->jumlah_suara_tidak_sah  == null)
                             0
                             @else
-                            {{$value->jumlah_suara_tidak_sah}}
+                            {{ number_format( $value->jumlah_suara_tidak_sah , 0 , '.' , ',' ); }}
                             @endif
                         </td>
                     </tr>

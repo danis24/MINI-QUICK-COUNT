@@ -26,7 +26,7 @@
                         <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
                             Jumlah Suara Masuk
                         </h3>
-                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{$jumlah_suara_masuk}}</span>
+                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{ number_format( $jumlah_suara_masuk , 0 , '.' , ',' ); }}</span>
                     </div>
                 </div>
                 <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:border-gray-700 sm:p-6 dark:bg-gray-800">
@@ -34,7 +34,7 @@
                         <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
                             Jumlah Suara Sah
                         </h3>
-                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{$jumlah_suara_sah}}</span>
+                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{ number_format( $jumlah_suara_sah , 0 , '.' , ',' ); }}</span>
                     </div>
                 </div>
                 <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:border-gray-700 sm:p-6 dark:bg-gray-800">
@@ -42,7 +42,7 @@
                         <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
                             Jumlah Suara Tidak Sah
                         </h3>
-                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{$jumlah_suara_tidak_sah}}</span>
+                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{number_format( $jumlah_suara_tidak_sah , 0 , '.' , ',' );}}</span>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                                 </td>
                                 <td class="px-6 py-4" wire:poll.5s>
                                     @if($value->flagCount->count() > 0)
-                                    {{$value->flagCount->sum('count')}}
+                                    {{ number_format( $value->flagCount->sum('count') , 0 , '.' , ',' ); }}
                                     @else
                                     0
                                     @endif
@@ -136,7 +136,7 @@
                                 </td>
                                 <td class="px-6 py-4" wire:poll.5s>
                                     @if($value->legislativeCount->count() > 0)
-                                    {{ $value->legislativeCount->sum('count') }}
+                                    {{ number_format( $value->legislativeCount->sum('count') , 0 , '.' , ',' ); }}
                                     @else
                                     0
                                     @endif
@@ -167,7 +167,7 @@
                         <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
                             Jumlah Suara Masuk
                         </h3>
-                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{$jumlah_suara_masuk}}</span>
+                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{ number_format( $jumlah_suara_masuk , 0 , '.' , ',' ); }}</span>
                     </div>
                 </div>
                 <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:border-gray-700 sm:p-6 dark:bg-gray-800">
@@ -175,7 +175,7 @@
                         <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
                             Jumlah Suara Sah
                         </h3>
-                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{$jumlah_suara_sah}}</span>
+                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{ number_format( $jumlah_suara_sah , 0 , '.' , ',' ); }}</span>
                     </div>
                 </div>
                 <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:border-gray-700 sm:p-6 dark:bg-gray-800">
@@ -183,7 +183,7 @@
                         <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
                             Jumlah Suara Tidak Sah
                         </h3>
-                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{$jumlah_suara_tidak_sah}}</span>
+                        <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" wire:poll.5s>{{number_format( $jumlah_suara_tidak_sah , 0 , '.' , ',' );}}</span>
                     </div>
                 </div>
             </div>
@@ -226,7 +226,7 @@
                                 </td>
                                 <td class="px-6 py-4" wire:poll.5s>
                                     @if($value->flagCount->count() > 0)
-                                    {{$value->flagCount->sum('count')}}
+                                    {{ number_format( $value->flagCount->sum('count') , 0 , '.' , ',' ); }}
                                     @else
                                     0
                                     @endif
@@ -277,7 +277,7 @@
                                 </td>
                                 <td class="px-6 py-4" wire:poll.5s>
                                     @if($value->legislativeCount->count() > 0)
-                                    {{ $value->legislativeCount->sum('count') }}
+                                    {{ number_format( $value->legislativeCount->sum('count') , 0 , '.' , ',' ); }}
                                     @else
                                     0
                                     @endif
