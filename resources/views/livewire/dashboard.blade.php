@@ -49,7 +49,7 @@
             <div class="py-10 grid w-full grid-cols-1 gap-4 mt-4 xl:grid-cols-2 2xl:grid-cols-3">
                 <!-- Partai -->
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                    <h4 class="py-4 px-4 text-2md font-bold dark:text-white">5 Partai Jumlah Suara Terbanyak</h4>
+                    <h4 class="py-4 px-4 text-2md font-bold dark:text-white">7 Partai Jumlah Suara Terbanyak</h4>
                     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
@@ -190,7 +190,7 @@
             <div class="py-10 grid w-full grid-cols-1 gap-4 mt-4 xl:grid-cols-2 2xl:grid-cols-3">
                 <!-- Partai -->
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                    <h4 class="py-4 px-4 text-2md font-bold dark:text-white">5 Partai Jumlah Suara Terbanyak</h4>
+                    <h4 class="py-4 px-4 text-2md font-bold dark:text-white">7 Partai Jumlah Suara Terbanyak</h4>
                     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
